@@ -7,7 +7,6 @@ package com.practica.cajanegra;
 
 import com.cajanegra.SingleLinkedListImpl;
 
-
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
@@ -17,8 +16,6 @@ import static org.junit.jupiter.api.Assertions.*;
 public class TestFuncionalidadGet {
 
     private final SingleLinkedListImpl<String> listaActual = new SingleLinkedListImpl<>("A", "B", "C", "D", "E");
-    private final SingleLinkedListImpl<String> listaVacia = new SingleLinkedListImpl<>();
-    private final SingleLinkedListImpl<String> listaUnElemeto = new SingleLinkedListImpl<>("A");
 
     @BeforeAll
     static void setup() {
