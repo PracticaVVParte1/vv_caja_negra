@@ -89,142 +89,80 @@ public class TestFuncionalidadAdd {
     @DisplayName("addAtPosPrueba8")
     @Test
     void addAtPosPrueba8() {
-        assertThrows(IllegalArgumentException.class, () -> listaActual.addAtPos("M", 0));
+        assertThrows(IllegalArgumentException.class, () -> listaActual.addAtPos("S", 0));
     }
+
     @DisplayName("addAtPosPrueba9")
     @Test
-    void addAtPosPrueba9() {
-        assertThrows(IllegalArgumentException.class, () -> listaActual.addAtPos("A", 0));
+    public void addAtPosPrueba9() {
+        SingleLinkedListImpl<String> listaEsperada = new SingleLinkedListImpl<>("S", "A", "B");
+        listaActual.addAtPos("S",1);
+        assertIterableEquals(listaEsperada, listaActual);
     }
     @DisplayName("addAtPosPrueba10")
     @Test
-    void addAtPosPrueba10() {
-        assertThrows(IllegalArgumentException.class, () -> listaActual.addAtPos("Z", 0));
-    }
-    @DisplayName("addAtPosPrueba11")
-    @Test
-    void addAtPosPrueba11() {
-        assertThrows(IllegalArgumentException.class, () -> listaActual.addAtPos("Y", 0));
-    }
-    @DisplayName("addAtPosPrueba12")
-    @Test
-    void addAtPosPrueba12() {
-        assertThrows(IllegalArgumentException.class, () -> listaActual.addAtPos("B", 0));
-    }
-    @DisplayName("addAtPosPrueba13")
-    @Test
-    void addAtPosPrueba13() {
-        assertThrows(IllegalArgumentException.class, () -> listaActual.addAtPos("@", 0));
-    }
-    @DisplayName("addAtPosPrueba14")
-    @Test
-    void addAtPosPrueba14() {
-        assertThrows(IllegalArgumentException.class, () -> listaActual.addAtPos("[", 0));
-    }
-    @DisplayName("addAtPosPrueba15")
-    @Test
-    public void addAtPosPrueba15() {
-        SingleLinkedListImpl<String> listaEsperada = new SingleLinkedListImpl<>("A", "M", "B");
-        listaActual.addAtPos("M",2);
+    public void addAtPosPrueb10() {
+        SingleLinkedListImpl<String> listaEsperada = new SingleLinkedListImpl<>("A", "S", "B");
+        listaActual.addAtPos("S",2);
         assertIterableEquals(listaEsperada, listaActual);
     }
-    @DisplayName("addAtPosPrueba16")
-    @Test
-    public void addAtPosPrueb16() {
-        SingleLinkedListImpl<String> listaEsperada = new SingleLinkedListImpl<>("A", "A", "B");
-        listaActual.addAtPos("A",2);
-        assertIterableEquals(listaEsperada, listaActual);
-    }
-    @DisplayName("addAtPosPrueba17")
-    @Test
-    public void addAtPosPrueba17() {
-        SingleLinkedListImpl<String> listaEsperada = new SingleLinkedListImpl<>("A", "Z", "B");
-        listaActual.addAtPos("Z",2);
-        assertIterableEquals(listaEsperada, listaActual);
-    }
-    @DisplayName("addAtPosPrueba18")
-    @Test
-    public void addAtPosPrueba18() {
-        SingleLinkedListImpl<String> listaEsperada = new SingleLinkedListImpl<>("A", "Y", "B");
-        listaActual.addAtPos("Y",2);
-        assertIterableEquals(listaEsperada, listaActual);
-    }
-    @DisplayName("addAtPosPrueba19")
-    @Test
-    public void addAtPosPrueba19() {
-        SingleLinkedListImpl<String> listaEsperada = new SingleLinkedListImpl<>("A", "B", "B");
-        listaActual.addAtPos("B",2);
-        assertIterableEquals(listaEsperada, listaActual);
-    }
-    @DisplayName("addAtPosPrueba20")
-    @Test
-    public void addAtPosPrueba20() {
-        SingleLinkedListImpl<String> listaEsperada = new SingleLinkedListImpl<>("A", "B");
-        listaActual.addAtPos("@",2);
-        assertIterableEquals(listaEsperada, listaActual);
-    }
-    @DisplayName("addAtPosPrueba21")
-    @Test
-    public void addAtPosPrueba21() {
-        SingleLinkedListImpl<String> listaEsperada = new SingleLinkedListImpl<>("A", "B");
-        listaActual.addAtPos("[",2);
-        assertIterableEquals(listaEsperada, listaActual);
-    }
+
 
     //Pruebas addFirst (T element) ---------------------------------------------------------------------------------------
 
-    @DisplayName("addFisrtPrueba1")
+    @DisplayName("addFirstPrueba1")
     @Test
-    public void addFisrtPrueba1(){
+    public void addFirstPrueba1(){
         SingleLinkedListImpl<String> listaEsperada = new SingleLinkedListImpl<>("M", "A", "B");
         listaActual.addFirst("M");
         assertIterableEquals(listaEsperada, listaActual);
 
+
     }
 
-    @DisplayName("addFisrtPrueba2")
+    @DisplayName("addFirstPrueba2")
     @Test
-    public void addFisrtPrueba2(){
+    public void addFirstPrueba2(){
         SingleLinkedListImpl<String> listaEsperada = new SingleLinkedListImpl<>("A", "A", "B");
         listaActual.addFirst("A");
         assertIterableEquals(listaEsperada, listaActual);
     }
 
-    @DisplayName("addFisrtPrueba3")
+    @DisplayName("addFirstPrueba3")
     @Test
-    public void addFisrtPrueba3(){
+    public void addFirstPrueba3(){
         SingleLinkedListImpl<String> listaEsperada = new SingleLinkedListImpl<>("Z", "A", "B");
         listaActual.addFirst("Z");
         assertIterableEquals(listaEsperada, listaActual);
     }
 
-    @DisplayName("addFisrtPrueba4")
+    @DisplayName("addFirstPrueba4")
     @Test
-    public void addFisrtPrueba4(){
+    public void addFirstPrueba4(){
         SingleLinkedListImpl<String> listaEsperada = new SingleLinkedListImpl<>("B", "A", "B");
         listaActual.addFirst("B");
         assertIterableEquals(listaEsperada, listaActual);
     }
 
-    @DisplayName("addFisrtPrueba5")
+    @DisplayName("addFirstPrueba5")
     @Test
-    public void addFisrtPrueba5(){
+    public void addFirstPrueba5(){
         SingleLinkedListImpl<String> listaEsperada = new SingleLinkedListImpl<>("Y", "A", "B");
         listaActual.addFirst("Y");
         assertIterableEquals(listaEsperada, listaActual);
     }
 
-    @DisplayName("addFisrtPrueba6")
+    @DisplayName("addFirstPrueba6")
     @Test
-    public void addFisrtPrueba6(){
+    public void addFirstPrueba6(){
         SingleLinkedListImpl<String> listaEsperada = new SingleLinkedListImpl<>("A", "B");
         listaActual.addFirst("@");
         assertIterableEquals(listaEsperada, listaActual);
     }
 
-    @DisplayName("addFisrtPrueba7")
+    @DisplayName("addFirstPrueba7")
     @Test
-    public void addFisrtPrueba7(){
+    public void addFirstPrueba7(){
         SingleLinkedListImpl<String> listaEsperada = new SingleLinkedListImpl<>("A", "B");
         listaActual.addFirst("[");
         assertIterableEquals(listaEsperada, listaActual);
@@ -357,98 +295,23 @@ public class TestFuncionalidadAdd {
     @DisplayName("addNTimesPueba8")
     @Test
     public void addNTimesPrueba8(){
-        assertThrows(IllegalArgumentException.class, () -> listaActual.addNTimes("M", 0));
+        assertThrows(IllegalArgumentException.class, () -> listaActual.addNTimes("S", -1));
     }
 
     @DisplayName("addNTimesPueba9")
     @Test
     public void addNTimesPrueba9(){
-        assertThrows(IllegalArgumentException.class, () -> listaActual.addNTimes("A", 0));
+        SingleLinkedListImpl<String> listaEsperada = new SingleLinkedListImpl<>("A", "B");
+        listaActual.addNTimes("S", 0);
+        assertIterableEquals(listaEsperada, listaActual);
     }
 
     @DisplayName("addNTimesPueba10")
     @Test
     public void addNTimesPrueba10(){
-        assertThrows(IllegalArgumentException.class, () -> listaActual.addNTimes("Z", 0));
-    }
-
-    @DisplayName("addNTimesPueba11")
-    @Test
-    public void addNTimesPrueba11(){
-        assertThrows(IllegalArgumentException.class, () -> listaActual.addNTimes("B", 0));
-    }
-
-    @DisplayName("addNTimesPueba12")
-    @Test
-    public void addNTimesPrueba12(){
-        assertThrows(IllegalArgumentException.class, () -> listaActual.addNTimes("Y", 0));
-    }
-
-    @DisplayName("addNTimesPueba13")
-    @Test
-    public void addNTimesPrueba13(){
-        assertThrows(IllegalArgumentException.class, () -> listaActual.addNTimes("@", 0));
-    }
-
-    @DisplayName("addNTimesPueba14")
-    @Test
-    public void addNTimesPrueba14(){
-        assertThrows(IllegalArgumentException.class, () -> listaActual.addNTimes("[", 0));
-    }
-
-    @DisplayName("addNTimesPueba15")
-    @Test
-    public void addNTimesPrueba15(){
-        SingleLinkedListImpl<String> listaEsperada = new SingleLinkedListImpl<>("A", "B", "M", "M");
-        listaActual.addNTimes("M", 2);
+        SingleLinkedListImpl<String> listaEsperada = new SingleLinkedListImpl<>("A", "B", "S");
+        listaActual.addNTimes("S", 1);
         assertIterableEquals(listaEsperada, listaActual);
     }
 
-    @DisplayName("addNTimesPueba16")
-    @Test
-    public void addNTimesPrueba16(){
-        SingleLinkedListImpl<String> listaEsperada = new SingleLinkedListImpl<>("A", "B", "A", "A");
-        listaActual.addNTimes("A", 2);
-        assertIterableEquals(listaEsperada, listaActual);
-    }
-
-    @DisplayName("addNTimesPueba17")
-    @Test
-    public void addNTimesPrueba17(){
-        SingleLinkedListImpl<String> listaEsperada = new SingleLinkedListImpl<>("A", "B", "Z", "Z");
-        listaActual.addNTimes("Z", 2);
-        assertIterableEquals(listaEsperada, listaActual);
-    }
-
-    @DisplayName("addNTimesPueba18")
-    @Test
-    public void addNTimesPrueba18(){
-        SingleLinkedListImpl<String> listaEsperada = new SingleLinkedListImpl<>("A", "B", "B", "B");
-        listaActual.addNTimes("B", 2);
-        assertIterableEquals(listaEsperada, listaActual);
-    }
-
-    @DisplayName("addNTimesPueba19")
-    @Test
-    public void addNTimesPrueba19(){
-        SingleLinkedListImpl<String> listaEsperada = new SingleLinkedListImpl<>("A", "B", "Y", "Y");
-        listaActual.addNTimes("Y", 2);
-        assertIterableEquals(listaEsperada, listaActual);
-    }
-
-    @DisplayName("addNTimesPueba20")
-    @Test
-    public void addNTimesPrueba20(){
-        SingleLinkedListImpl<String> listaEsperada = new SingleLinkedListImpl<>("A", "B");
-        listaActual.addNTimes("@", 2);
-        assertIterableEquals(listaEsperada, listaActual);
-    }
-
-    @DisplayName("addNTimesPueba21")
-    @Test
-    public void addNTimesPrueba21(){
-        SingleLinkedListImpl<String> listaEsperada = new SingleLinkedListImpl<>("A", "B");
-        listaActual.addNTimes("[", 2);
-        assertIterableEquals(listaEsperada, listaActual);
-    }
 }
