@@ -12,7 +12,7 @@ GRUPO IWM-42 Grupo 2
 # Información adicional sobre el proyecto
 Proyecto donde esta alojado el código de la práctica de pruebas de caja negra de la asignatura verificación y validación
 
-## Instrucciones para utilizar este proyecto
+# Instrucciones para utilizar este proyecto
 * Para descargar el proyecto, clonarlo desde la URL del repositorio de Github en el IDE de desarrollo de su preferencia (Eclipse, Netbeans, IntelliJ, etc.)
 * Comprobar que el IDE reconoce el proyecto como un proyecto maven
 * Importar la librería "singleList.jar" haciendo uso del siguiente comando, sustuyendo "/my/path" por el directorio donde se encuentre el JAR:
