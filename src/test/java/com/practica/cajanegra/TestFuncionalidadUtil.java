@@ -34,84 +34,84 @@ public class TestFuncionalidadUtil {
 
     //Pruebas isEmpty() ---------------------------------------------------------------------------------------
 
-    @DisplayName("pruebaIsEmpty1")
+    @DisplayName("isEmptyPrueba1")
     @Test
-    public void pruebaIsEmpty1() {
+    public void isEmptyPrueba1() {
         assertTrue(listaVacia.isEmpty());
-    }
+    } //IEP1
 
-    @DisplayName("pruebaIsEmpty2")
+    @DisplayName("isEmptyPrueba2")
     @Test
-    public void pruebaIsEmpty2() {
+    public void isEmptyPrueba2() {
         assertFalse(listaUnElemeto.isEmpty());
-    }
+    } //IEP2
 
-    @DisplayName("pruebaIsEmpty3")
+    @DisplayName("isEmptyPrueba3")
     @Test
-    public void pruebaIsEmpty3()  {
+    public void isEmptyPrueba3()  {
         assertFalse(listaActual.isEmpty());
-    }
+    } //IEP3
 
     //Pruebas reverse() ---------------------------------------------------------------------------------------
 
-    @DisplayName("pruebaReverse1")
+    @DisplayName("reversePrueba1")
     @Test
-    public void pruebaReverse1() {
+    public void reversePrueba1() { //RP1
         SingleLinkedListImpl<String> listaEsperada = new SingleLinkedListImpl<>();
         assertIterableEquals(listaVacia.reverse(), listaEsperada);
     }
 
-    @DisplayName("pruebaReverse2")
+    @DisplayName("reversePrueba2")
     @Test
-    public void pruebaReverse2() {
+    public void reversePrueba2() { //RP2
         SingleLinkedListImpl<String> listaEsperada = new SingleLinkedListImpl<>("A");
         assertIterableEquals(listaUnElemeto.reverse(), listaEsperada);
     }
 
-    @DisplayName("pruebaReverse3")
+    @DisplayName("reversePrueba3")
     @Test
-    public void pruebaReverse3() {
+    public void reversePrueba3() { //RP3
         SingleLinkedListImpl<String> listaEsperada = new SingleLinkedListImpl<>("B", "A");
         assertIterableEquals( listaActual.reverse(), listaEsperada);
     }
 
     //Pruebas size() ---------------------------------------------------------------------------------------
 
-    @DisplayName("pruebaSize1")
+    @DisplayName("sizePrueba1")
     @Test
-    public void pruebaSize1(){
+    public void sizePrueba1(){
         assertEquals(listaVacia.size(), 0);
-    }
+    } //SP1
 
     @DisplayName("pruebaSize2")
     @Test
-    public void pruebaSize2(){
+    public void sizePrueba2(){
         assertEquals(listaUnElemeto.size(), 1);
-    }
+    } //SP2
 
     @DisplayName("pruebaSize3")
     @Test
-    public void pruebaSize3(){
+    public void sizePrueba3(){
         assertEquals(listaActual.size(), 2);
-    }
+    } //SP3
 
     //Pruebas toString() ---------------------------------------------------------------------------------------
 
-    @DisplayName("pruebaToString1")
+    @DisplayName("toStringPrueba1")
     @Test
-    public void pruebatoString1(){
+    public void toStringPrueba1(){
         assertEquals(listaVacia.toString(), "[]");
-    }
+    } //TSP1
 
-    @DisplayName("pruebaToString2")
+    @DisplayName("toStringPrueba2")
     @Test
-    public void pruebatoString2(){
+    public void toStringPrueba2(){
         assertEquals(listaUnElemeto.toString(), "[A]");
-    }
+    } //TSP2
 
-    @DisplayName("pruebaToString3")
+    @DisplayName("toStringPrueba3")
     @Test
-    public void pruebatoString3(){
+    public void toStringPrueba3(){
         assertEquals(listaActual.toString(), "[A, B]");
-    }
+    } //TSP3
 }

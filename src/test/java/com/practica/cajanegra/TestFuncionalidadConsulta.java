@@ -35,7 +35,7 @@ public class TestFuncionalidadConsulta {
 
     @DisplayName("indexOfPrueba1")
     @Test
-    public void indexOfPrueba1(  ){
+    public void indexOfPrueba1( ){ //IOP1
 
         int a = listaActual.indexOf("M");
 
@@ -45,7 +45,7 @@ public class TestFuncionalidadConsulta {
 
     @DisplayName("indexOfPrueba2")
     @Test
-    public void indexOfPrueba2(  ){
+    public void indexOfPrueba2( ){ //IOP2
 
         int a = listaActual.indexOf("A");
 
@@ -55,7 +55,7 @@ public class TestFuncionalidadConsulta {
 
     @DisplayName("indexOfPrueba3")
     @Test
-    public void indexOfPrueba3(  ){
+    public void indexOfPrueba3(  ){ //IOP3
 
         int a = listaActual.indexOf("Z");
 
@@ -65,7 +65,7 @@ public class TestFuncionalidadConsulta {
 
     @DisplayName("indexOfPrueba4")
     @Test
-    public void indexOfPrueba4(  ){
+    public void indexOfPrueba4(  ){ //IOP4
 
         int a = listaActual.indexOf("B");
 
@@ -75,78 +75,78 @@ public class TestFuncionalidadConsulta {
 
     @DisplayName("indexOfPrueba5")
     @Test
-    public void indexOfPrueba5(  ){
+    public void indexOfPrueba5(  ){ //IOP5
 
         assertThrows(NoSuchElementException.class, () -> listaActual.indexOf("Y"));
 
     }
 
-    @DisplayName("pruebaIndexOf6")
+    @DisplayName("indexOfPrueba6")
     @Test
-    public void pruebaIndexOf6(  ){
+    public void indexOfPrueba6(  ){ //IOP6
 
         assertThrows(NoSuchElementException.class, () -> listaActual.indexOf("@"));
 
     }
 
-    @DisplayName("pruebaIndexOf7")
+    @DisplayName("indexOfPrueba7")
     @Test
-    public void pruebaIndexOf7(  ){
+    public void indexOfPrueba7(  ){ //IOP7
         assertThrows(NoSuchElementException.class, () -> listaActual.indexOf("["));
 
     }
     //Pruebas isSubList(AbstractSingleLinkedListImpl<T> part) ---------------------------------------------------------------------------------------
 
-    @DisplayName("pruebaIsSublist1")
+    @DisplayName("isSublistPrueba1")
     @Test
-    public void pruebaIsSublist1(  ){
+    public void isSublistPrueba1(  ){ //ISLP1
 
         assertEquals(listaActual.isSubList(listaVacia),0);
 
     }
-    @DisplayName("pruebaIsSublist2")
+    @DisplayName("isSublistPrueba2")
     @Test
-    public void pruebaIsSublist2(  ){
+    public void isSublistPrueba2(  ){ //ISLP2
 
         SingleLinkedListImpl<String> sublista = new SingleLinkedListImpl<>("A", "B");
         assertEquals(listaActual.isSubList(sublista),1);
 
     }
-    @DisplayName("pruebaIsSublist3")
+    @DisplayName("isSublistPruebat3")
     @Test
-    public void pruebaIsSublist3(  ){
+    public void isSublistPrueba3(  ){ //ISLP3
 
         SingleLinkedListImpl<String> sublista = new SingleLinkedListImpl<>("Z");
         assertEquals(listaActual.isSubList(sublista),9);
 
     }
-    @DisplayName("pruebaIsSublist4")
+    @DisplayName("isSublistPrueba4")
     @Test
-    public void pruebaIsSublist4(  ){
+    public void isSublistPrueba4(  ){ //ISLP4
 
         SingleLinkedListImpl<String> sublista = new SingleLinkedListImpl<>("X", "Z");
         assertEquals(listaActual.isSubList(sublista),8);
 
     }
-    @DisplayName("pruebaIsSublist5")
+    @DisplayName("isSublistPrueba5")
     @Test
-    public void pruebaIsSublist5(  ){
+    public void isSublistPrueba5(  ){ //ISLP5
 
         SingleLinkedListImpl<String> sublista = new SingleLinkedListImpl<>("B", "C", "B");
         assertEquals(listaActual.isSubList(sublista),2);
 
     }
-    @DisplayName("pruebaIsSublist6")
+    @DisplayName("isSublistPrueba6")
     @Test
-    public void pruebaIsSublist6(  ){
+    public void isSublistPrueba6(  ){ //ISLP6
 
         SingleLinkedListImpl<String> sublista = new SingleLinkedListImpl<>("B", "C", "B", "A", "M");
         assertEquals(listaActual.isSubList(sublista),2);
 
     }
-    @DisplayName("pruebaIsSublist7")
+    @DisplayName("isSublistPrueba7")
     @Test
-    public void pruebaIsSublist7(  ){
+    public void isSublistPrueba7(  ){ //ISLP7
 
         SingleLinkedListImpl<String> sublista = new SingleLinkedListImpl<>("B", "A", "Z");
         assertEquals(listaActual.isSubList(sublista),-1);

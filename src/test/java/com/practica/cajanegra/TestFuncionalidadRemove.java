@@ -38,23 +38,23 @@ public class TestFuncionalidadRemove {
 
     //Pruebas removeLast() ---------------------------------------------------------------------------------------
 
-    @DisplayName("pruebaRemoveLast1()")
+    @DisplayName("removeLastVacioPrueba1()")
     @Test
-    public void pruebaRemoveLastVacio1()  {
+    public void removeLastVacioPrueba1()  { //RLVP1
         assertThrows(EmptyCollectionException.class, listaVacia::removeLast);
     }
 
-    @DisplayName("pruebaRemoveLast2()")
+    @DisplayName("removeLastVacioPrueba2()")
     @Test
-    public void pruebaRemoveLastVacio2() throws EmptyCollectionException {
+    public void removeLastVacioPrueba2() throws EmptyCollectionException { //RLVP2
         SingleLinkedListImpl<String> listaEsperada = new SingleLinkedListImpl<>();
         listaUnElemeto.removeLast();
         assertIterableEquals(listaUnElemeto, listaEsperada);
     }
 
-    @DisplayName("pruebaRemoveLast3()")
+    @DisplayName("removeLastVacioPrueba3()")
     @Test
-    public void pruebaRemoveLastVacio3() throws EmptyCollectionException {
+    public void removeLastVacioPrueba3() throws EmptyCollectionException { //RLVP3
         SingleLinkedListImpl<String> listaEsperada = new SingleLinkedListImpl<>("A");
         listaActual.removeLast();
         assertIterableEquals(listaActual, listaEsperada);
@@ -62,49 +62,49 @@ public class TestFuncionalidadRemove {
 
     //Pruebas removeLast(T elem) ---------------------------------------------------------------------------------------
 
-    @DisplayName("pruebaRemoveLast1(T elem)")
+    @DisplayName("removeLastPrueba1(T elem)")
     @Test
-    public void removeLastPrueba1() throws EmptyCollectionException, NoSuchElementException {
+    public void removeLastPrueba1() throws EmptyCollectionException, NoSuchElementException { //RLP1
         SingleLinkedListImpl<String> listaEsperada = new SingleLinkedListImpl<>("M","A","A","Z","Z","B","B","Y","Y");
         listaActualM.removeLast("M");
         assertIterableEquals(listaEsperada, listaActualM);
     }
-    @DisplayName("pruebaRemoveLast2(T elem)")
+    @DisplayName("removeLastPrueba2(T elem)")
     @Test
-    public void removeLastPrueba2() throws EmptyCollectionException, NoSuchElementException {
+    public void removeLastPrueba2() throws EmptyCollectionException, NoSuchElementException { //RLP2
         SingleLinkedListImpl<String> listaEsperada = new SingleLinkedListImpl<>("M","M","A","Z","Z","B","B","Y","Y");
         listaActualM.removeLast("A");
         assertIterableEquals(listaEsperada, listaActualM);
     }
-    @DisplayName("pruebaRemoveLast3(T elem)")
+    @DisplayName("removeLastPrueba3(T elem)")
     @Test
-    public void removeLastPrueba3() throws EmptyCollectionException, NoSuchElementException {
+    public void removeLastPrueba3() throws EmptyCollectionException, NoSuchElementException { //RLP3
         SingleLinkedListImpl<String> listaEsperada = new SingleLinkedListImpl<>("M","M","A","A","Z","B","B","Y","Y");
         listaActualM.removeLast("Z");
         assertIterableEquals(listaEsperada, listaActualM);
     }
-    @DisplayName("pruebaRemoveLast4(T elem)")
+    @DisplayName("removeLastPrueba4(T elem)")
     @Test
-    public void removeLastPrueba4() throws EmptyCollectionException, NoSuchElementException {
+    public void removeLastPrueba4() throws EmptyCollectionException, NoSuchElementException { //RLP4
         SingleLinkedListImpl<String> listaEsperada = new SingleLinkedListImpl<>("M","M","A","A","Z","Z","B","Y","Y");
         listaActualM.removeLast("B");
         assertIterableEquals(listaEsperada, listaActualM);
     }
-    @DisplayName("pruebaRemoveLast5(T elem)")
+    @DisplayName("removeLastPrueba5(T elem)")
     @Test
-    public void removeLastPrueba5() throws EmptyCollectionException, NoSuchElementException {
+    public void removeLastPrueba5() throws EmptyCollectionException, NoSuchElementException { //RLP5
         SingleLinkedListImpl<String> listaEsperada = new SingleLinkedListImpl<>("M","M","A","A","Z","Z","B","B","Y");
         listaActualM.removeLast("Y");
         assertIterableEquals(listaEsperada, listaActualM);
     }
-    @DisplayName("pruebaRemoveLast6(T elem)")
+    @DisplayName("removeLastPrueba6(T elem)")
     @Test
-    public void removeLastPrueba6() throws NoSuchElementException {
+    public void removeLastPrueba6() throws NoSuchElementException { //RLP6
         assertThrows(NoSuchElementException.class, () -> listaActualM.removeLast("@"));
     }
-    @DisplayName("pruebaRemoveLast7(T elem)")
+    @DisplayName("removeLastPrueba7(T elem)")
     @Test
-    public void removeLastPrueba7() throws NoSuchElementException {
+    public void removeLastPrueba7() throws NoSuchElementException { //RLP7
         assertThrows(NoSuchElementException.class, () -> listaActualM.removeLast("["));
     }
 }

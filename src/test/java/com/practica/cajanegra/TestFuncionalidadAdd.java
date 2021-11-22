@@ -34,7 +34,7 @@ public class TestFuncionalidadAdd {
 
     @DisplayName("addAtPosPrueba1")
     @Test
-    public void addAtPosPrueba1() {
+    public void addAtPosPrueba1() { //ATPP1
         SingleLinkedListImpl<String> listaEsperada = new SingleLinkedListImpl<>("M", "A", "B");
         listaActual.addAtPos("M",1);
         assertIterableEquals(listaEsperada, listaActual);
@@ -42,7 +42,7 @@ public class TestFuncionalidadAdd {
 
     @DisplayName("addAtPosPrueba2")
     @Test
-    public void addAtPosPrueba2() {
+    public void addAtPosPrueba2() { //ATPP2
         SingleLinkedListImpl<String> listaEsperada = new SingleLinkedListImpl<>("A", "A", "B");
         listaActual.addAtPos("A",1);
         assertIterableEquals(listaEsperada, listaActual);
@@ -50,7 +50,7 @@ public class TestFuncionalidadAdd {
 
     @DisplayName("addAtPosPrueba3")
     @Test
-    public void addAtPosPrueba3() {
+    public void addAtPosPrueba3() { //ATPP3
         SingleLinkedListImpl<String> listaEsperada = new SingleLinkedListImpl<>("Z", "A", "B");
         listaActual.addAtPos("Z",1);
         assertIterableEquals(listaEsperada, listaActual);
@@ -58,7 +58,7 @@ public class TestFuncionalidadAdd {
 
     @DisplayName("addAtPosPrueba4")
     @Test
-    public void addAtPosPrueba4() {
+    public void addAtPosPrueba4() { //ATPP4
         SingleLinkedListImpl<String> listaEsperada = new SingleLinkedListImpl<>("B", "A", "B");
         listaActual.addAtPos("B",1);
         assertIterableEquals(listaEsperada, listaActual);
@@ -66,7 +66,7 @@ public class TestFuncionalidadAdd {
 
     @DisplayName("addAtPosPrueba5")
     @Test
-    public void addAtPosPrueba5() {
+    public void addAtPosPrueba5() { //ATPP5
         SingleLinkedListImpl<String> listaEsperada = new SingleLinkedListImpl<>("Y", "A", "B");
         listaActual.addAtPos("Y",1);
         assertIterableEquals(listaEsperada, listaActual);
@@ -74,34 +74,34 @@ public class TestFuncionalidadAdd {
 
     @DisplayName("addAtPosPrueba6")
     @Test
-    public void addAtPosPrueba6() {
+    public void addAtPosPrueba6() { //ATPP6
         SingleLinkedListImpl<String> listaEsperada = new SingleLinkedListImpl<>("A", "B");
         listaActual.addAtPos("@",1);
         assertIterableEquals(listaEsperada, listaActual);
     }
     @DisplayName("addAtPosPrueba7")
     @Test
-    public void addAtPosPrueba7() {
+    public void addAtPosPrueba7() { //ATPP7
         SingleLinkedListImpl<String> listaEsperada = new SingleLinkedListImpl<>("A", "B");
         listaActual.addAtPos("[",1);
         assertIterableEquals(listaEsperada, listaActual);
     }
     @DisplayName("addAtPosPrueba8")
     @Test
-    void addAtPosPrueba8() {
+    public void addAtPosPrueba8() { //ATPP8
         assertThrows(IllegalArgumentException.class, () -> listaActual.addAtPos("S", 0));
     }
 
     @DisplayName("addAtPosPrueba9")
     @Test
-    public void addAtPosPrueba9() {
+    public void addAtPosPrueba9() { //ATPP9
         SingleLinkedListImpl<String> listaEsperada = new SingleLinkedListImpl<>("S", "A", "B");
         listaActual.addAtPos("S",1);
         assertIterableEquals(listaEsperada, listaActual);
     }
     @DisplayName("addAtPosPrueba10")
     @Test
-    public void addAtPosPrueb10() {
+    public void addAtPosPrueb10() { //ATPP10
         SingleLinkedListImpl<String> listaEsperada = new SingleLinkedListImpl<>("A", "S", "B");
         listaActual.addAtPos("S",2);
         assertIterableEquals(listaEsperada, listaActual);
@@ -112,7 +112,7 @@ public class TestFuncionalidadAdd {
 
     @DisplayName("addFirstPrueba1")
     @Test
-    public void addFirstPrueba1(){
+    public void addFirstPrueba1(){ //AFP1
         SingleLinkedListImpl<String> listaEsperada = new SingleLinkedListImpl<>("M", "A", "B");
         listaActual.addFirst("M");
         assertIterableEquals(listaEsperada, listaActual);
@@ -122,7 +122,7 @@ public class TestFuncionalidadAdd {
 
     @DisplayName("addFirstPrueba2")
     @Test
-    public void addFirstPrueba2(){
+    public void addFirstPrueba2(){ //AFP2
         SingleLinkedListImpl<String> listaEsperada = new SingleLinkedListImpl<>("A", "A", "B");
         listaActual.addFirst("A");
         assertIterableEquals(listaEsperada, listaActual);
@@ -130,7 +130,7 @@ public class TestFuncionalidadAdd {
 
     @DisplayName("addFirstPrueba3")
     @Test
-    public void addFirstPrueba3(){
+    public void addFirstPrueba3(){ //AFP3
         SingleLinkedListImpl<String> listaEsperada = new SingleLinkedListImpl<>("Z", "A", "B");
         listaActual.addFirst("Z");
         assertIterableEquals(listaEsperada, listaActual);
@@ -138,7 +138,7 @@ public class TestFuncionalidadAdd {
 
     @DisplayName("addFirstPrueba4")
     @Test
-    public void addFirstPrueba4(){
+    public void addFirstPrueba4(){ //AFP4
         SingleLinkedListImpl<String> listaEsperada = new SingleLinkedListImpl<>("B", "A", "B");
         listaActual.addFirst("B");
         assertIterableEquals(listaEsperada, listaActual);
@@ -146,7 +146,7 @@ public class TestFuncionalidadAdd {
 
     @DisplayName("addFirstPrueba5")
     @Test
-    public void addFirstPrueba5(){
+    public void addFirstPrueba5(){ //AFP5
         SingleLinkedListImpl<String> listaEsperada = new SingleLinkedListImpl<>("Y", "A", "B");
         listaActual.addFirst("Y");
         assertIterableEquals(listaEsperada, listaActual);
@@ -154,7 +154,7 @@ public class TestFuncionalidadAdd {
 
     @DisplayName("addFirstPrueba6")
     @Test
-    public void addFirstPrueba6(){
+    public void addFirstPrueba6(){ //AFP6
         SingleLinkedListImpl<String> listaEsperada = new SingleLinkedListImpl<>("A", "B");
         listaActual.addFirst("@");
         assertIterableEquals(listaEsperada, listaActual);
@@ -162,7 +162,7 @@ public class TestFuncionalidadAdd {
 
     @DisplayName("addFirstPrueba7")
     @Test
-    public void addFirstPrueba7(){
+    public void addFirstPrueba7(){ //AFP7
         SingleLinkedListImpl<String> listaEsperada = new SingleLinkedListImpl<>("A", "B");
         listaActual.addFirst("[");
         assertIterableEquals(listaEsperada, listaActual);
@@ -173,7 +173,7 @@ public class TestFuncionalidadAdd {
     @DisplayName("addLastPrueba1")
     @Test
 
-    public void addLastPrueba1(  ) {
+    public void addLastPrueba1(  ) { //ALP1
         SingleLinkedListImpl<String> listaEsperada = new SingleLinkedListImpl<>("A", "B", "M");
         listaActual.addLast("M");
         assertIterableEquals(listaEsperada, listaActual);
@@ -182,7 +182,7 @@ public class TestFuncionalidadAdd {
 
     @DisplayName("addLastPrueba2")
     @Test
-    public void addLastPrueba2(  ){
+    public void addLastPrueba2(  ){ //ALP2
         SingleLinkedListImpl<String> listaEsperada = new SingleLinkedListImpl<>("A", "B", "A");
         listaActual.addLast("A");
         assertIterableEquals(listaEsperada,listaActual);
@@ -191,7 +191,7 @@ public class TestFuncionalidadAdd {
 
     @DisplayName("addLastPrueba3")
     @Test
-    public void addLastPrueba3(  ){
+    public void addLastPrueba3(  ){ //ALP3
         SingleLinkedListImpl<String> listaEsperada= new SingleLinkedListImpl<>("A", "B", "Z");
         listaActual.addLast("Z");
         assertIterableEquals(listaEsperada,listaActual);
@@ -200,7 +200,7 @@ public class TestFuncionalidadAdd {
 
     @DisplayName("addLastPrueba4")
     @Test
-    public void addLastPrueba4(  ){
+    public void addLastPrueba4(  ){ //ALP4
         SingleLinkedListImpl<String> listaEsperada = new SingleLinkedListImpl<>("A", "B", "B");
         listaActual.addLast("B");
         assertIterableEquals(listaEsperada,listaActual);
@@ -209,7 +209,7 @@ public class TestFuncionalidadAdd {
 
     @DisplayName("addLastPrueba5")
     @Test
-    public void addLastPrueba5(  ){
+    public void addLastPrueba5(  ){ //ALP5
         SingleLinkedListImpl<String> listaEsperada = new SingleLinkedListImpl<>("A", "B", "Y");
         listaActual.addLast("Y");
         assertIterableEquals(listaEsperada,listaActual);
@@ -218,16 +218,17 @@ public class TestFuncionalidadAdd {
 
     @DisplayName("addLastPrueba6")
     @Test
-    public void addLastPrueba6(  ){
+    public void addLastPrueba6(  ){ //ALP6
         SingleLinkedListImpl<String> listaEsperada = new SingleLinkedListImpl<>("A", "B");
         listaActual.addLast("@");
+        System.out.println(listaActual);
         assertIterableEquals(listaEsperada,listaActual);
 
     }
 
     @DisplayName("addLastPrueba7")
     @Test
-    public void addLastPrueba7(  ){
+    public void addLastPrueba7(  ){ //ALP7
         SingleLinkedListImpl<String> listaEsperada = new SingleLinkedListImpl<>("A", "B");
         listaActual.addLast("[");
         assertIterableEquals(listaEsperada,listaActual);
@@ -238,7 +239,7 @@ public class TestFuncionalidadAdd {
 
     @DisplayName("addNTimesPueba1")
     @Test
-    public void addNTimesPrueba1(){
+    public void addNTimesPrueba1(){ //ANTP1
         SingleLinkedListImpl<String> listaEsperada = new SingleLinkedListImpl<>("A", "B", "M");
         listaActual.addNTimes("M", 1);
         assertIterableEquals(listaEsperada, listaActual);
@@ -246,7 +247,7 @@ public class TestFuncionalidadAdd {
 
     @DisplayName("addNTimesPueba2")
     @Test
-    public void addNTimesPrueba2(){
+    public void addNTimesPrueba2(){ //ANTP2
         SingleLinkedListImpl<String> listaEsperada = new SingleLinkedListImpl<>("A", "B", "A");
         listaActual.addNTimes("A", 1);
         assertIterableEquals(listaEsperada, listaActual);
@@ -254,7 +255,7 @@ public class TestFuncionalidadAdd {
 
     @DisplayName("addNTimesPueba3")
     @Test
-    public void addNTimesPrueba3(){
+    public void addNTimesPrueba3(){ //ANTP3
         SingleLinkedListImpl<String> listaEsperada = new SingleLinkedListImpl<>("A", "B", "Z");
         listaActual.addNTimes("Z", 1);
         assertIterableEquals(listaEsperada, listaActual);
@@ -262,7 +263,7 @@ public class TestFuncionalidadAdd {
 
     @DisplayName("addNTimesPueba4")
     @Test
-    public void addNTimesPrueba4(){
+    public void addNTimesPrueba4(){ //ANTP4
         SingleLinkedListImpl<String> listaEsperada = new SingleLinkedListImpl<>("A", "B", "B");
         listaActual.addNTimes("B", 1);
         assertIterableEquals(listaEsperada, listaActual);
@@ -270,7 +271,7 @@ public class TestFuncionalidadAdd {
 
     @DisplayName("addNTimesPueba5")
     @Test
-    public void addNTimesPrueba5(){
+    public void addNTimesPrueba5(){ //ANTP5
         SingleLinkedListImpl<String> listaEsperada = new SingleLinkedListImpl<>("A", "B", "Y");
         listaActual.addNTimes("Y", 1);
         assertIterableEquals(listaEsperada, listaActual);
@@ -278,7 +279,7 @@ public class TestFuncionalidadAdd {
 
     @DisplayName("addNTimesPueba6")
     @Test
-    public void addNTimesPrueba6(){
+    public void addNTimesPrueba6(){ //ANTP6
         SingleLinkedListImpl<String> listaEsperada = new SingleLinkedListImpl<>("A", "B");
         listaActual.addNTimes("@", 1);
         assertIterableEquals(listaEsperada, listaActual);
@@ -286,7 +287,7 @@ public class TestFuncionalidadAdd {
 
     @DisplayName("addNTimesPueba7")
     @Test
-    public void addNTimesPrueba7(){
+    public void addNTimesPrueba7(){ //ANTP7
         SingleLinkedListImpl<String> listaEsperada = new SingleLinkedListImpl<>("A", "B");
         listaActual.addNTimes("[", 1);
         assertIterableEquals(listaEsperada, listaActual);
@@ -294,13 +295,13 @@ public class TestFuncionalidadAdd {
 
     @DisplayName("addNTimesPueba8")
     @Test
-    public void addNTimesPrueba8(){
+    public void addNTimesPrueba8(){ //ANTP8
         assertThrows(IllegalArgumentException.class, () -> listaActual.addNTimes("S", -1));
     }
 
     @DisplayName("addNTimesPueba9")
     @Test
-    public void addNTimesPrueba9(){
+    public void addNTimesPrueba9(){ //ANTP9
         SingleLinkedListImpl<String> listaEsperada = new SingleLinkedListImpl<>("A", "B");
         listaActual.addNTimes("S", 0);
         assertIterableEquals(listaEsperada, listaActual);
@@ -308,10 +309,10 @@ public class TestFuncionalidadAdd {
 
     @DisplayName("addNTimesPueba10")
     @Test
-    public void addNTimesPrueba10(){
+    public void addNTimesPrueba10(){ //ANTP10
         SingleLinkedListImpl<String> listaEsperada = new SingleLinkedListImpl<>("A", "B", "S");
         listaActual.addNTimes("S", 1);
+        System.out.println(listaActual);
         assertIterableEquals(listaEsperada, listaActual);
     }
-
 }

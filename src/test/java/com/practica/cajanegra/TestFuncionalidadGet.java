@@ -29,50 +29,50 @@ public class    TestFuncionalidadGet {
 
     //Pruebas getAtPos(int pos) ---------------------------------------------------------------------------------------
 
-    @DisplayName("pruebaGetAtPos1")
+    @DisplayName("getAtPosPrueba1")
     @Test
-    public void pruebaGetAtPos1(  ){
+    public void getAtPosPrueba1(  ){ //GAPP1
         String a = listaActual.getAtPos(listaActual.size()/2 + 1);
         assertEquals("C",a);
     }
 
-    @DisplayName("pruebaGetAtPos2")
+    @DisplayName("getAtPosPrueba2")
     @Test
-    public void pruebaGetAtPos2(  ){
+    public void getAtPosPrueba2(  ){ //GAPP2
         String a = listaActual.getAtPos(1);
         assertEquals("A",a);
     }
 
-    @DisplayName("pruebaGetAtPos3")
+    @DisplayName("getAtPosPrueba3")
     @Test
-    public void pruebaGetAtPos3(  ){
+    public void getAtPosPrueba3(  ){ //GAPP3
         String a = listaActual.getAtPos(listaActual.size());
         assertEquals("E",a);
     }
 
-    @DisplayName("pruebaGetAtPos4")
+    @DisplayName("getAtPosPrueba4")
     @Test
-    public void pruebaGetAtPos4(  ){
+    public void getAtPosPrueba4(  ){ //GAPP4
         String a = listaActual.getAtPos(2);
         assertEquals("B",a);
     }
 
-    @DisplayName("pruebaGetAtPos5")
+    @DisplayName("getAtPosPrueba5")
     @Test
-    public void pruebaGetAtPos5(  ){
+    public void getAtPosPrueba5(  ){ //GAPP5
         String a = listaActual.getAtPos(listaActual.size()-1);
         assertEquals("D",a);
     }
 
-    @DisplayName("pruebaGetAtPos6")
+    @DisplayName("getAtPosPrueba6")
     @Test
-    public void pruebaGetAtPos6(  ){
+    public void getAtPosPrueba6(  ){ //GAPP6
         assertThrows(IllegalArgumentException.class, () -> listaActual.getAtPos(0));
     }
 
-    @DisplayName("pruebaGetAtPos7")
+    @DisplayName("getAtPosPrueba7")
     @Test
-    public void pruebaGetAtPos7(  ) {
+    public void getAtPosPrueba7(  ) { //GAPP7
         assertThrows(IllegalArgumentException.class, () -> listaActual.getAtPos(listaActual.size() + 1));
     }
 }
