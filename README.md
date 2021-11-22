@@ -14,7 +14,8 @@ Proyecto donde esta alojado el código de la práctica de pruebas de caja negra 
 
 # Instrucciones para utilizar este proyecto
 * Para descargar el proyecto, clonarlo desde la URL del repositorio de Github en el IDE de desarrollo de su preferencia (Eclipse, Netbeans, IntelliJ, etc.)
-* Comprobar que el IDE reconoce el proyecto como un proyecto maven
+* Comprobar que el IDE reconoce el proyecto como un proyecto maven (Maven 3.6.3)
+* Asegurarse de utilizar Java JDK 1.8 o superior
 * Importar la librería "singleList.jar" haciendo uso del siguiente comando, sustuyendo "/my/path" por el directorio donde se encuentre el JAR:
     install:install-file -Dfile=/my/path/SingleList.jar -DgroupId=com.singleList -DartifactId=SingleList -Dversion=0.0.1-SNAPSHOT -Dpackaging=jar
 * Comprobar que se disponen de las dependencias necesarias para poder usar Junit5
