@@ -312,7 +312,6 @@ public class TestFuncionalidadAdd {
     public void addNTimesPrueba10(){ //ANTP10
         SingleLinkedListImpl<String> listaEsperada = new SingleLinkedListImpl<>("A", "B", "S");
         listaActual.addNTimes("S", 1);
-        System.out.println(listaActual);
         assertIterableEquals(listaEsperada, listaActual);
     }
 }
