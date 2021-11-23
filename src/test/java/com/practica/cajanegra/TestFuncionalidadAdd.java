@@ -75,16 +75,12 @@ public class TestFuncionalidadAdd {
     @DisplayName("addAtPosPrueba6")
     @Test
     public void addAtPosPrueba6() { //ATPP6
-        SingleLinkedListImpl<String> listaEsperada = new SingleLinkedListImpl<>("A", "B");
-        listaActual.addAtPos("@",1);
-        assertIterableEquals(listaEsperada, listaActual);
+        assertThrows(IllegalArgumentException.class, () -> listaActual.addAtPos("@",1));
     }
     @DisplayName("addAtPosPrueba7")
     @Test
     public void addAtPosPrueba7() { //ATPP7
-        SingleLinkedListImpl<String> listaEsperada = new SingleLinkedListImpl<>("A", "B");
-        listaActual.addAtPos("[",1);
-        assertIterableEquals(listaEsperada, listaActual);
+        assertThrows(IllegalArgumentException.class, () -> listaActual.addAtPos("[",1));
     }
     @DisplayName("addAtPosPrueba8")
     @Test
@@ -155,17 +151,13 @@ public class TestFuncionalidadAdd {
     @DisplayName("addFirstPrueba6")
     @Test
     public void addFirstPrueba6(){ //AFP6
-        SingleLinkedListImpl<String> listaEsperada = new SingleLinkedListImpl<>("A", "B");
-        listaActual.addFirst("@");
-        assertIterableEquals(listaEsperada, listaActual);
+        assertThrows(IllegalArgumentException.class, () -> listaActual.addFirst("@"));
     }
 
     @DisplayName("addFirstPrueba7")
     @Test
     public void addFirstPrueba7(){ //AFP7
-        SingleLinkedListImpl<String> listaEsperada = new SingleLinkedListImpl<>("A", "B");
-        listaActual.addFirst("[");
-        assertIterableEquals(listaEsperada, listaActual);
+        assertThrows(IllegalArgumentException.class, () -> listaActual.addFirst("["));
     }
 
     //Pruebas addLast (T element) ----------------------------------------------------------------------------------------
@@ -219,19 +211,14 @@ public class TestFuncionalidadAdd {
     @DisplayName("addLastPrueba6")
     @Test
     public void addLastPrueba6(  ){ //ALP6
-        SingleLinkedListImpl<String> listaEsperada = new SingleLinkedListImpl<>("A", "B");
-        listaActual.addLast("@");
-        System.out.println(listaActual);
-        assertIterableEquals(listaEsperada,listaActual);
+        assertThrows(IllegalArgumentException.class, () -> listaActual.addLast("@"));
 
     }
 
     @DisplayName("addLastPrueba7")
     @Test
     public void addLastPrueba7(  ){ //ALP7
-        SingleLinkedListImpl<String> listaEsperada = new SingleLinkedListImpl<>("A", "B");
-        listaActual.addLast("[");
-        assertIterableEquals(listaEsperada,listaActual);
+        assertThrows(IllegalArgumentException.class, () -> listaActual.addLast("["));
 
     }
 
@@ -280,17 +267,13 @@ public class TestFuncionalidadAdd {
     @DisplayName("addNTimesPueba6")
     @Test
     public void addNTimesPrueba6(){ //ANTP6
-        SingleLinkedListImpl<String> listaEsperada = new SingleLinkedListImpl<>("A", "B");
-        listaActual.addNTimes("@", 1);
-        assertIterableEquals(listaEsperada, listaActual);
+        assertThrows(IllegalArgumentException.class, () -> listaActual.addNTimes("@", 1));
     }
 
     @DisplayName("addNTimesPueba7")
     @Test
     public void addNTimesPrueba7(){ //ANTP7
-        SingleLinkedListImpl<String> listaEsperada = new SingleLinkedListImpl<>("A", "B");
-        listaActual.addNTimes("[", 1);
-        assertIterableEquals(listaEsperada, listaActual);
+        assertThrows(IllegalArgumentException.class, () -> listaActual.addNTimes("[", 1));
     }
 
     @DisplayName("addNTimesPueba8")

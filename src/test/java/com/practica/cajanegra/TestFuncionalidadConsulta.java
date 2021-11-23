@@ -85,14 +85,14 @@ public class TestFuncionalidadConsulta {
     @Test
     public void indexOfPrueba6(  ){ //IOP6
 
-        assertThrows(NoSuchElementException.class, () -> listaActual.indexOf("@"));
+        assertThrows(IllegalArgumentException.class, () -> listaActual.indexOf("@"));
 
     }
 
     @DisplayName("indexOfPrueba7")
     @Test
     public void indexOfPrueba7(  ){ //IOP7
-        assertThrows(NoSuchElementException.class, () -> listaActual.indexOf("["));
+        assertThrows(IllegalArgumentException.class, () -> listaActual.indexOf("["));
 
     }
     //Pruebas isSubList(AbstractSingleLinkedListImpl<T> part) ---------------------------------------------------------------------------------------

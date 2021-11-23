@@ -100,11 +100,11 @@ public class TestFuncionalidadRemove {
     @DisplayName("removeLastPrueba6(T elem)")
     @Test
     public void removeLastPrueba6() throws NoSuchElementException { //RLP6
-        assertThrows(NoSuchElementException.class, () -> listaActualM.removeLast("@"));
+        assertThrows(IllegalArgumentException.class, () -> listaActualM.removeLast("@"));
     }
     @DisplayName("removeLastPrueba7(T elem)")
     @Test
     public void removeLastPrueba7() throws NoSuchElementException { //RLP7
-        assertThrows(NoSuchElementException.class, () -> listaActualM.removeLast("["));
+        assertThrows(IllegalArgumentException.class, () -> listaActualM.removeLast("["));
     }
 }
